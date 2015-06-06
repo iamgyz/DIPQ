@@ -2,10 +2,11 @@
 Dynamic IP Query system. For client side, run a small application to communicate with server. User can query dynamic IP by using server-side Restful-API
 
 ### Depency  
-`pip install paho-mqtt`  
+paho-mqtt
 
 ### Install  
 `git clone https://github.com/iamgyz/DIPQ.git`  
+`pip install paho-mqtt`  
 
 #### Client-side  
 `cd client`  
