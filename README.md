@@ -16,7 +16,7 @@ paho-mqtt
 `cd server`  
 `python3 server.py`  
 
-Check http://localhost:5566 to check if the server is running well or not.  
+Check http://<server IP>:5566 to check if the server is running well or not.  
 
 ### Usage  
 In client host, just run the application and enter your id, say 'qoo' 
