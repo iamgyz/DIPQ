@@ -7,6 +7,7 @@
 */
 var mqtt    = require('mqtt');
 var http = require('http');
+var prompt = require('prompt');
 
 var DIPQ = function(host,port,topic){
     this.host = host;
@@ -49,5 +50,9 @@ var DIPQ = function(host,port,topic){
 /*
     Main part, you can change the broker address to your own broker for private useage    
 */
-var dipq = new DIPQ('gyzlab.com',1883,"topic");
-dipq.run();
+prompt.message = 'Please Enter your id, which will be your own identifier';
+prompt.start();
+prompt.get('id',function (err, result) {
+   var dipq = new DIPQ('gyzlab.com',1883,result.id);
+   dipq.run();
+});

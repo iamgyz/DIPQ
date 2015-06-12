@@ -4,7 +4,8 @@
   "description": "Dynamic IP Query system.",
   "main": "index.js",
   "dependencies": {
-    "mqtt": "~1.2.1"
+    "mqtt": "~1.2.1",
+    "prompt": "^0.2.14"
   },
   "devDependencies": {},
   "scripts": {
