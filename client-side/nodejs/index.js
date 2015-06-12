@@ -8,6 +8,7 @@
 var mqtt    = require('mqtt');
 var http = require('http');
 var prompt = require('prompt');
+var fetch = require('node-fetch');
 
 var DIPQ = function(host,port,topic){
     this.host = host;
@@ -20,27 +21,25 @@ var DIPQ = function(host,port,topic){
             client.subscribe(this.topic);
         }.bind(this));//記得要把this的scope傳給callback
         client.on('message',function(topic,message){
+            var that = this;
             msg = message.toString();
             if(msg == '200:Qry'){
                 console.log(this.getTime()+"Get new request");
                 //get my dynamic ip
-                http.get({host:'gyzlab.com',path:'/myip/index.php'},function(res){
-                    var body='';
-                    res.on('data',function(d){
-                        body+=d;
-                    });
-                    res.on('end',function(){            
-                        var msg = '300:'+body
-                        client.publish(this.topic,msg,function(){
-                            console.log(this.getTime()+"Publish IP <"+body+">");
-                        }.bind(this));
-                    }.bind(this));
-                }.bind(this));    
+                fetch('http://gyzlab.com/myip/index.php')
+                .then(function(res){
+                    return res.text();
+                })
+                .then(function(body){
+                    var _msg = '300:'+body;
+                    client.publish(that.topic,_msg,function(){
+                        console.log(that.getTime()+"Publish IP <"+body+">");
+                    });   
+                });
             }
         }.bind(this));
 	
     };
-    
     //utilities
     this.getTime = function(){
         return '['+new Date().toString()+'] ';
