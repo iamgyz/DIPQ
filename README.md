@@ -6,7 +6,7 @@ For the hosts which are using dynamic IP and their home-gateway do not support d
 
 ## Feature  
 In client host, just run the application and enter your id, say 'qoo' 
-And the you can visit http://<server IP>:5566/qoo to query your dynamic IP ANYWHERE!  
+And the you can visit http://your-server-IP:5566/qoo to query your dynamic IP ANYWHERE!  
 
 
 # Client-side
