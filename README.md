@@ -39,7 +39,7 @@ And the you can visit `http://<your-server-IP>:5566/qoo` to query your dynamic I
 ### Usage
 1. `cd server-side`  
 2. `python3 server.py`  
-Check http://<server IP>:5566 to check if the server is running well or not.  
+Check `http://<your-server-IP>:5566` to check if the server is running well or not.  
 
 # Live DEMO  
 I've run a server application on my host http://gyzlab.com:5566  
