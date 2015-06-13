@@ -1,86 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>DIPQ by iamgyz</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <body>
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/github-dark.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>DIPQ</title>
+  <meta name="description" content="DIPQ">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">DIPQ</h1>
+    </header>
     <div id="container">
-      <div class="inner">
-
-        <header>
-          <h1>DIPQ</h1>
-          <h2>DIPQ</h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/iamgyz/DIPQ/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/iamgyz/DIPQ/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/iamgyz/DIPQ" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
+      <p class="tagline">DIPQ</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/iamgyz/DIPQ/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/iamgyz/DIPQ/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/iamgyz/DIPQ" class="code">View DIPQ on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
           <h1>
 <a id="dipq" class="anchor" href="#dipq" aria-hidden="true"><span class="octicon octicon-link"></span></a>DIPQ</h1>
 
-<p>Dynamic IP Query system. For client side, run a small application to communicate with server. User can query dynamic IP by using server-side Restful-API</p>
+<p>Dynamic IP Query system. For client side, run a small application to communicate with server. User can query dynamic IP by using server-side Restful-API.  </p>
 
-<h3>
-<a id="depency" class="anchor" href="#depency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Depency</h3>
+<h2>
+<a id="purpose" class="anchor" href="#purpose" aria-hidden="true"><span class="octicon octicon-link"></span></a>Purpose</h2>
 
-<p>paho-mqtt</p>
+<p>For the hosts which are using dynamic IP and their home-gateway do not support ddns.</p>
+
+<h2>
+<a id="feature" class="anchor" href="#feature" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature</h2>
+
+<p>In client host, just run the application and enter your id, say 'qoo'. 
+And the you can visit <code>http://&lt;your-server-IP&gt;:5566/qoo</code> to query your dynamic IP ANYWHERE!  </p>
+
+<h1>
+<a id="client-side" class="anchor" href="#client-side" aria-hidden="true"><span class="octicon octicon-link"></span></a>Client-side</h1>
+
+<h2>
+<a id="python-version" class="anchor" href="#python-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python version</h2>
 
 <h3>
 <a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h3>
 
-<p><code>git clone https://github.com/iamgyz/DIPQ.git</code><br>
-<code>pip install paho-mqtt</code>  </p>
-
-<h4>
-<a id="client-side" class="anchor" href="#client-side" aria-hidden="true"><span class="octicon octicon-link"></span></a>Client-side</h4>
-
-<p><code>cd client</code><br>
-<code>python3 client.py</code>  </p>
-
-<h4>
-<a id="server-side" class="anchor" href="#server-side" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server-side</h4>
-
-<p><code>cd server</code><br>
-<code>python3 server.py</code>  </p>
-
-<p>Check http://:5566 to check if the server is running well or not.  </p>
+<ol>
+<li>
+<code>pip install paho-mqtt</code><br>
+</li>
+<li>
+<code>git clone https://github.com/iamgyz/DIPQ.git</code><br>
+</li>
+</ol>
 
 <h3>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
 
-<p>In client host, just run the application and enter your id, say 'qoo' 
-And the you can visit http://:5566/qoo to query your dynamic IP ANYWHERE!  </p>
+<ol>
+<li>
+<code>cd client-side/python</code><br>
+</li>
+<li>
+<code>python3 client.py</code><br>
+</li>
+</ol>
+
+<h2>
+<a id="nodejs-version" class="anchor" href="#nodejs-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>NodeJS version</h2>
 
 <h3>
-<a id="live-demo" class="anchor" href="#live-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Live DEMO</h3>
+<a id="install-1" class="anchor" href="#install-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h3>
+
+<ol>
+<li>
+<code>git clone https://github.com/iamgyz/DIPQ.git</code><br>
+</li>
+<li>
+<code>cd client-side/nodejs</code><br>
+</li>
+<li>
+<code>npm install</code><br>
+</li>
+</ol>
+
+<h3>
+<a id="usage-1" class="anchor" href="#usage-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<ol>
+<li>
+<code>npm start</code><br>
+</li>
+</ol>
+
+<h1>
+<a id="server-side" class="anchor" href="#server-side" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server-side</h1>
+
+<h3>
+<a id="install-2" class="anchor" href="#install-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h3>
+
+<ol>
+<li>
+<code>git clone https://github.com/iamgyz/DIPQ.git</code><br>
+</li>
+</ol>
+
+<h3>
+<a id="usage-2" class="anchor" href="#usage-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<ol>
+<li>
+<code>cd server-side</code><br>
+</li>
+<li>
+<code>python3 server.py</code><br>
+Check http://:5566 to check if the server is running well or not.<br>
+</li>
+</ol>
+
+<h1>
+<a id="live-demo" class="anchor" href="#live-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Live DEMO</h1>
 
 <p>I've run a server application on my host <a href="http://gyzlab.com:5566">http://gyzlab.com:5566</a><br>
 So you can just clone client-side code and run it, and then you can query your real-time dynamic IP via <a href="http://gyzlab.com:5566/your-id">http://gyzlab.com:5566/your-id</a></p>
-        </section>
-
-        <footer>
-          DIPQ is maintained by <a href="https://github.com/iamgyz">iamgyz</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
+        </article>
       </div>
     </div>
-  </body>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/iamgyz" class="avatar"><img src="https://avatars3.githubusercontent.com/u/4011735?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/iamgyz">iamgyz</a> maintains <a href="https://github.com/iamgyz/DIPQ">DIPQ</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/iamgyz/DIPQ/tarball/master" class="tar">tar</a><a href="https://github.com/iamgyz/DIPQ/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
 </html>
