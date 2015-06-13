@@ -5,8 +5,8 @@ Dynamic IP Query system. For client side, run a small application to communicate
 For the hosts which are using dynamic IP and their home-gateway do not support ddns.
 
 ## Feature  
-In client host, just run the application and enter your id, say 'qoo' 
-And the you can visit http://your-server-IP:5566/qoo to query your dynamic IP ANYWHERE!  
+In client host, just run the application and enter your id, say 'qoo'. 
+And the you can visit `http://<your-server-IP>:5566/qoo` to query your dynamic IP ANYWHERE!  
 
 
 # Client-side
